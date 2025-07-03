@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shipping Policy - Gudd Ji</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="header-top">
+            <div class="logo-section">
+                <img src="images/brandlogo.png" alt="Gudd Ji Logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                <div style="display:none; color: #f4a261; font-weight: bold;">Gudd Ji Logo</div>
+                <div class="brand-text">
+                    <h1>Welcome to Gudd Ji</h1>
+                    <p>Pure and Organic Jaggery Products</p>
+                </div>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="cart.html" class="cart-icon">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="cart-count" id="cartCount">0</span>
+                    </a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="about-container">
+        <div class="about-section">
+            <h2>Shipping Policy</h2>
+            <p>At Gudd Ji, we believe in delivering the best quality organic jaggery products to our customers, right to their doorstep. Our shipping policy is designed to ensure your order reaches you fresh, safe, and on time, every time.</p>
+        </div>
+
+        <div class="about-section">
+            <h2>Shipping Coverage</h2>
+            <p>We currently ship our products across India. For international shipping, please contact our customer support team for assistance.</p>
+        </div>
+
+        <div class="about-section">
+            <h2>Order Processing</h2>
+            <ul>
+                <li>All orders are processed within 1-2 business days after receiving your order confirmation email.</li>
+                <li>Orders placed on weekends or holidays will be processed on the next business day.</li>
+                <li>You will receive a notification with tracking details once your order has shipped.</li>
+            </ul>
+        </div>
+
+        <div class="about-section">
+            <h2>Shipping Methods & Delivery Time</h2>
+            <ul>
+                <li>We partner with reliable courier services to ensure timely and safe delivery.</li>
+                <li>Estimated delivery time is 3-7 business days for most locations within India.</li>
+                <li>Remote or rural areas may require additional delivery time.</li>
+            </ul>
+        </div>
+
+        <div class="about-section">
+            <h2>Shipping Charges</h2>
+            <ul>
+                <li>We offer free shipping on all orders above Rs. 499.</li>
+                <li>For orders below Rs. 499, a nominal shipping fee will be calculated at checkout.</li>
+            </ul>
+        </div>
+
+        <div class="about-section">
+            <h2>Packaging & Quality Assurance</h2>
+            <p>We take utmost care in packaging our organic jaggery products to preserve their freshness and quality. Each order is carefully packed to prevent damage during transit.</p>
+        </div>
+
+        <div class="about-section">
+            <h2>Order Tracking</h2>
+            <p>Once your order is shipped, you will receive an email or SMS with the tracking number and link. You can track your order status at any time.</p>
+        </div>
+
+        <div class="about-section">
+            <h2>Delays & Issues</h2>
+            <p>While we strive to deliver on time, unforeseen circumstances (such as weather, strikes, or courier delays) may occasionally affect delivery. If your order is delayed, please contact us and we will assist you promptly.</p>
+        </div>
+
+        <div class="about-section">
+            <h2>Contact Us</h2>
+            <p>If you have any questions about your order or our shipping policy, please reach out to our customer service team at <a href="mailto:support@guddji.com">support@guddji.com</a> or visit our <a href="contact.html">Contact</a> page.</p>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>About Us</h3>
+                <p>Gudd Ji is your trusted source for pure and organic jaggery products.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Customer Service</h3>
+                <ul>
+                    <li><a href="shippingpolicy.html">Shipping Policy</a></li>
+                    <li><a href="returnpolicy.html">Return Policy</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                    <li><a href="privacy.html">Privacy Policy</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Connect With Us</h3>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Gudd Ji. All rights reserved.</p>
+        </div>
+    </footer>
+    <script>
+        // Cart functionality
+        let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+        function updateCartCount() {
+            const cartCount = document.getElementById('cartCount');
+            const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
+            cartCount.textContent = totalItems;
+        }
+
+        // Initialize cart count on page load
+        updateCartCount();
+    </script>
+</body>
+</html>
