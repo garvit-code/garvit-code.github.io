@@ -279,18 +279,33 @@
             <!-- Google Pay Button Container -->
             <div id="google-pay-button"></div>
             
+            <!-- Razorpay Button -->
+            <button class="fallback-checkout-btn" id="razorpay-btn" type="button">
+                <i class="fas fa-credit-card"></i> Pay with Razorpay
+            </button>
+            
             <!-- Fallback button -->
             <button class="fallback-checkout-btn" onclick="processPayment()" style="display: none;">
                 <i class="fas fa-credit-card"></i> Pay Now
+            </button>
             </button>
         </div>
     </div>
 
     <script src="https://pay.google.com/gp/p/js/pay.js"></script>
+  
     <script>
         let paymentsClient;
         let totalAmount = 0;
-
+         
+            }
+            // Get customer details
+            const firstName = document.getElementById('firstName').value;
+            const lastName = document.getElementById('lastName').value;
+            const email = document.getElementById('email').value;
+            const phone = document.getElementById('phone').value;
+            const name = firstName + ' ' + lastName;
+           
         // Load cart and display order summary
         function loadOrderSummary() {
             const cart = JSON.parse(localStorage.getItem('cart')) || [];
@@ -319,10 +334,14 @@
             });
 
             
-            if subtotal<500 const shipping = 50;
-            else const shipping=00
-            const tax = subtotal * 0.18;
-            totalAmount = subtotal + shipping + tax;
+         let shipping;
+if (subtotal < 500) {
+    shipping = 50;
+} else {
+    shipping = 0;
+}
+const tax = subtotal * 0.18;
+const totalAmount = subtotal + shipping + tax;
 
             document.getElementById('checkoutSubtotal').textContent = `₹${subtotal}`;
             document.getElementById('checkoutTax').textContent = `₹${tax.toFixed(2)}`;
