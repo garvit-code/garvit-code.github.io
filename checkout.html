@@ -139,7 +139,8 @@
     <header>
         <div class="header-top">
             <div class="logo-section">
-             <a href="index.html">   <img src="images/brandlogo.png" alt="Gudd Ji Logo"></a>
+                <img src="images/brandlogo.png" alt="Gudd Ji Logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                <div style="display:none; color: #f4a261; font-weight: bold;">Gudd Ji Logo</div>
                 <div class="brand-text">
                     <h1>Welcome to Gudd Ji</h1>
                     <p>Pure and Organic Jaggery Products</p>
@@ -279,29 +280,18 @@
             <!-- Google Pay Button Container -->
             <div id="google-pay-button"></div>
             
-          
             <!-- Fallback button -->
             <button class="fallback-checkout-btn" onclick="processPayment()" style="display: none;">
                 <i class="fas fa-credit-card"></i> Pay Now
-            </button>
             </button>
         </div>
     </div>
 
     <script src="https://pay.google.com/gp/p/js/pay.js"></script>
-  
     <script>
         let paymentsClient;
         let totalAmount = 0;
-         
-            }
-            // Get customer details
-            const firstName = document.getElementById('firstName').value;
-            const lastName = document.getElementById('lastName').value;
-            const email = document.getElementById('email').value;
-            const phone = document.getElementById('phone').value;
-            const name = firstName + ' ' + lastName;
-           
+
         // Load cart and display order summary
         function loadOrderSummary() {
             const cart = JSON.parse(localStorage.getItem('cart')) || [];
@@ -329,9 +319,9 @@
                 orderItemsContainer.appendChild(itemElement);
             });
 
-const shipping = 40 ;
-const tax = subtotal * 0.15;
-totalAmount = subtotal + shipping + tax;
+            const shipping = 40;
+            const tax = subtotal * 0.15;
+            totalAmount = subtotal + shipping + tax;
 
             document.getElementById('checkoutSubtotal').textContent = `₹${subtotal}`;
             document.getElementById('checkoutTax').textContent = `₹${tax.toFixed(2)}`;
