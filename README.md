@@ -11,6 +11,10 @@ garvit-code.github.io-repository/
 ├── checkout.html
 ├── styles.css
 ├── script.js
+├── faq.html
+├── shippingpolicy.html
+├── privacypolicy.html
+├── returnpolicy.html
 ├── images/
 │   ├── brandlogo.png
 │   ├── product1.jpg
