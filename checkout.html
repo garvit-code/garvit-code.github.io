@@ -329,14 +329,8 @@
                 orderItemsContainer.appendChild(itemElement);
             });
 
-            
-         let shipping;
-if (subtotal < 500) {
-    shipping = 50;
-} else {
-    shipping = 0;
-}
-const tax = subtotal * 0.18;
+const shipping = 40 :
+const tax = subtotal * 0.15;
 const totalAmount = subtotal + shipping + tax;
 
             document.getElementById('checkoutSubtotal').textContent = `₹${subtotal}`;
