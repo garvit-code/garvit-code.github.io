@@ -319,6 +319,7 @@ header {
     align-items: center;
     gap: 1rem;
     margin-right: 2rem;
+    margin-top :6px;
     height: 100%;
 }
 
